@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Timer de concentration pour PRONOTE",
+  "version": "1.0",
+  "description": "Ajoute un item 'Timer de concentration' au menu de PRONOTE.",
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "https://0211391y.index-education.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://0211391y.index-education.net/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    },
+    "default_title": "Timer PRONOTE"
+  }
+}
